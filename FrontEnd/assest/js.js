@@ -10,29 +10,22 @@ $('#uploadBtn').click(function () {
     fileReader.onload =function (e) {
         $('#bgImg').css("background-image","url("+e.target.result+")");
     };
+
     fileReader.readAsDataURL(file);
+
+
+    $.ajax({
+        url: 'http://localhost:8080/imguploader/uploader',
+        type: 'POST',
+        data: formData,
+        processData: false,
+        contentType: false,
+        success: function(response) {
+            console.log(this.data);
+        },
+        error: function() {
+            alert('Failed to upload image.');
+        }
+    });
+
 });
-
-$.ajax({
-    url: 'http://localhost:8080/app/images/upload',
-    type: 'POST',
-    data: formData,
-    processData: false,
-    contentType: false,
-    success: function(response) {
-        alert(response);
-        loadImages();
-    },
-    error: function() {
-        alert('Failed to upload image.');
-    }
-});
-
-
-
-
-
-// $.ajax({
-//     url: 'http://localhost:8080/app/images/upload',
-//     type: 'GET'
-// });
