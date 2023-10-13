@@ -1,0 +1,57 @@
+body{
+    position: relative;
+    margin: 0;
+}
+
+#topic{
+    position: absolute;
+    top: 2vh;
+    left: 45vw;
+    margin: auto;
+}
+
+#uploader{
+    width: 40vw;
+    height: 70vh;
+    background-color: black;
+
+    position: absolute;
+    top: 10vh;
+    margin: auto;
+}
+
+#table{
+    width: 60vw;
+    height: 70vh;
+    background-color: greenyellow;
+
+    position: absolute;
+    top: 10vh;
+    left: 40vw;
+    margin: auto;
+}
+
+#bgImg{
+    height: 300px;
+    width: 300px;
+    background-color: white;
+    background-size: cover;
+    background-position: center;
+
+    position: absolute;
+    top: 10vh;
+    left: 10vw;
+    margin: auto;
+}
+
+#uploadButton{
+    position: absolute;
+    top: 50vh;
+    left: 10vw;
+    margin: auto;
+}
+
+#tableBody{
+    width: 60vw;
+    height: 20vh;
+}
