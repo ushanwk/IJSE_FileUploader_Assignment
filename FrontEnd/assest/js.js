@@ -20,12 +20,34 @@ $('#uploadBtn').click(function () {
         data: formData,
         processData: false,
         contentType: false,
-        success: function(response) {
-            console.log(this.data);
+        success: function() {
+            alert("Added Successfully.");
         },
         error: function() {
-            alert('Failed to upload image.');
+            alert("Failed to upload image.");
         }
     });
 
+
+
 });
+
+
+// function loadFiles(){
+//
+//     $.ajax({
+//         url: 'http://localhost:8080/imguploader/uploader',
+//         success: function(response) {
+//
+//             alert("Added Successfully.");
+//             console.log(response[1]);
+//
+//             // $('#bgImg2').css("background-image","url(/Users/ushan_kaushalya/Downloads/Images/abc.jpeg)")
+//
+//         },
+//         error: function() {
+//             alert("Failed to upload image.");
+//         }
+//     });
+//
+// }
